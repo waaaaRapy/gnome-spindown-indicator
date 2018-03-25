@@ -1,0 +1,10 @@
+{
+    "name": "Spin Status",
+    "description": "Show HDD spinning status in topbar",
+    "uuid": "spin-status@warapy.net",
+    "shell-version": [
+        "3.26.2"
+    ],
+    "settings-schema": "org.gnome.shell.extensions.spin-status",
+    "gettext-domain": "gnome-shell-extension-spin-status"
+}

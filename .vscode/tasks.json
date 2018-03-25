@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "copy",
+            "type": "shell",
+            "command": "rsync -ac --delete ./ ~/.local/share/gnome-shell/extensions/spin-status@warapy.net",
+            "problemMatcher": []
+        },
+        {
+            "label": "schema",
+            "type": "shell",
+            "command": "glib-compile-schemas schemas/"
+        },
+        {
+            "label": "watch",
+            "type": "shell",
+            "isBackground": true,
+            "command": "lsyncd -delay 0 -nodaemon -rsync ./ ~/.local/share/gnome-shell/extensions/spin-status@warapy.net"
+        },
+    ]
+}
