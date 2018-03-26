@@ -4,10 +4,8 @@ const St = imports.gi.St;
 const Lang = imports.lang;
 const PanelMenu = imports.ui.panelMenu;
 const Main = imports.ui.main;
-const Mainloop = imports.mainloop;
 
 const Me = imports.misc.extensionUtils.getCurrentExtension();
-const Convenience = Me.imports.convenience;
 const DriveIcon = Me.imports.driveIcon;
 const UDisks2 = Me.imports.udisks2.UDisks2;
 const Timer = Me.imports.timer.Timer;
@@ -21,8 +19,6 @@ const SpinStatusMenu = new Lang.Class({
         this.parent(St.Align.START);
         this.connect('destroy', Lang.bind(this, this._onDestroy));
 
-        this._settings = Convenience.getSettings();
-        
         this._drives = {};
         this._menu = new St.BoxLayout();
         this.actor.add_actor(this._menu);
@@ -109,23 +105,18 @@ const SpinStatusMenu = new Lang.Class({
     _onDestroy: function() {
     },
 
-    get positionInPanel() {
-        return this._settings.get_string('position-in-panel');
-    }
 });
 
 let spinStatusMenu;
 
 function init(extensionMeta) {
-    Convenience.initTranslations();
     let theme = imports.gi.Gtk.IconTheme.get_default();
     theme.append_search_path(extensionMeta.path + "/icons");
 }
 
 function enable() {
     spinStatusMenu = new SpinStatusMenu();
-    let positionInPanel = spinStatusMenu.positionInPanel;
-    Main.panel.addToStatusArea('spin-status', spinStatusMenu, 0, positionInPanel);
+    Main.panel.addToStatusArea('spin-status', spinStatusMenu, 0, 'right');
 }
 
 function disable() {

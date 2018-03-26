@@ -4,7 +4,5 @@
     "uuid": "spin-status@warapy.net",
     "shell-version": [
         "3.26.2"
-    ],
-    "settings-schema": "org.gnome.shell.extensions.spin-status",
-    "gettext-domain": "gnome-shell-extension-spin-status"
+    ]
 }
