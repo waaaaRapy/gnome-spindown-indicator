@@ -2,10 +2,10 @@ const Lang = imports.lang;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 
-const IFACE_DRIVE = "org.freedesktop.UDisks2.Drive";;
-const IFACE_DRIVE_ATA = "org.freedesktop.UDisks2.Drive.Ata";
+var IFACE_DRIVE = "org.freedesktop.UDisks2.Drive";;
+var IFACE_DRIVE_ATA = "org.freedesktop.UDisks2.Drive.Ata";
 
-const UDisks2 = new Lang.Class({
+var UDisks2 = new Lang.Class({
     Name: 'UDisks2',
 
     _init: function(){

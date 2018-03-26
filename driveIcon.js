@@ -3,11 +3,11 @@ const Lang = imports.lang;
 const Main = imports.ui.main;
 const St = imports.gi.St;
 
-const STATE_SPINNING = 0;
-const STATE_SPINDOWN = 1;
-const STATE_UNKNOWN= -1;
+var STATE_SPINNING = 0;
+var STATE_SPINDOWN = 1;
+var STATE_UNKNOWN= -1;
 
-const DriveIcon = new Lang.Class({
+var DriveIcon = new Lang.Class({
     Name: 'DriveIcon',
     Extends: St.Icon,
 

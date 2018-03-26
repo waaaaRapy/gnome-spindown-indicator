@@ -1,7 +1,7 @@
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 
-const Timer = new Lang.Class({
+var Timer = new Lang.Class({
     Name: 'Timer',
 
     /**
