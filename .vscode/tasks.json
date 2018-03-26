@@ -6,7 +6,7 @@
         {
             "label": "copy",
             "type": "shell",
-            "command": "rsync -ac --delete ./ ~/.local/share/gnome-shell/extensions/spin-status@warapy.net",
+            "command": "rsync -ac --delete ./ ~/.local/share/gnome-shell/extensions/spindown-indicator@warapy.net",
             "problemMatcher": []
         },
         {
@@ -18,7 +18,7 @@
             "label": "watch",
             "type": "shell",
             "isBackground": true,
-            "command": "lsyncd -delay 0 -nodaemon -rsync ./ ~/.local/share/gnome-shell/extensions/spin-status@warapy.net"
+            "command": "lsyncd -delay 0 -nodaemon -rsync ./ ~/.local/share/gnome-shell/extensions/spindown-indicator@warapy.net"
         },
         {
             "label": "release",

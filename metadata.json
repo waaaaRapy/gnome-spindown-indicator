@@ -1,8 +1,10 @@
 {
-    "name": "Spin Status",
-    "description": "Show HDD spinning status in topbar",
-    "uuid": "spin-status@warapy.net",
+    "name": "HDD Spindown Indicator",
+    "description": "Add HDD spindown status indicators to the top panel.",
+    "uuid": "spindown-indicator@warapy.net",
     "shell-version": [
-        "3.26.2"
-    ]
+        "3.26"
+    ],
+    "url": "https://github.com/waaaaRapy/gnome-spindown-indicator",
+    "version": 1
 }
