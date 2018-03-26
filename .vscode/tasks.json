@@ -20,5 +20,11 @@
             "isBackground": true,
             "command": "lsyncd -delay 0 -nodaemon -rsync ./ ~/.local/share/gnome-shell/extensions/spin-status@warapy.net"
         },
+        {
+            "label": "release",
+            "type": "shell",
+            "command": "zip -r tmp/gnome-shell-extension.zip * -x tmp",
+            "problemMatcher": []
+        },
     ]
 }
